@@ -1,5 +1,10 @@
 # Synthétiseur FM Kalimba
 
+<div style="display: flex; flex-direction: row; justify-content: space-around;">
+  <img src="photo/final_1_solo.jpg" alt="Synthétiseur FM Kalimba 1" style="width: 45%;"/>
+  <img src="photo/final_2_multi.jpg" alt="Synthétiseur FM Kalimba 2" style="width: 45%;"/>
+</div>
+
 Bienvenue dans le dépôt GitHub de votre Synthétiseur FM en forme de kalimba ! Ce guide vous aidera à comprendre comment télécharger le code sur votre carte Arduino Nano et utiliser votre synthétiseur.
 
 ## Table des matières
@@ -15,6 +20,8 @@ Bienvenue dans le dépôt GitHub de votre Synthétiseur FM en forme de kalimba !
 ## Description du projet
 
 Ce projet est un synthétiseur FM unique en son genre, conçu en forme de kalimba. Il combine la richesse sonore de la synthèse FM avec l’esthétique et la jouabilité d’un kalimba traditionnel.
+
+ce projet est un fork du projet <a href="https://www.instructables.com/Arduino-Synthesizer-With-FM/" >Arduino-Synthesizer-With-FM</a> by <a href="https://www.instructables.com/member/rgco/">rgco</a>
 
 ## Fonctionnalités
 
