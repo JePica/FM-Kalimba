@@ -20,6 +20,7 @@
 
 //instrument definitions 
          
+/*classic instrument from the original code 
 #define ninstr 12           //   piano xlphn guitar cmbll bell funky vibr metal violin bass trumpt harm
 unsigned int ldness[ninstr]  = {   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64}; // loudness   
 unsigned int pitch0[ninstr]  = {   12,   12,   12,   12,   24,   24,    0,   12,   24,   12,   12,   24}; // pitch of key0         
@@ -31,18 +32,34 @@ unsigned int FM_inc[ninstr]  = {  256,  512,  768,  400,  200,   96,  528,  244,
 unsigned int FM_a1[ninstr]  =  {  128,  512,  512, 1024,  512,    0, 1024, 2048,  256,  256,  384,  256}; // FM amplitude start
 unsigned int FM_a2[ninstr]  =  {   64,    0,  128,  128,  128,  512,  768,  512,  128,  128,  256,  128}; // FM amplitude end
 unsigned int FM_dec[ninstr]  = {   64,  128,  128,  128,   32,  128,  128,  128,  128,  128,   64,   64}; // FM decay
+*/
 
-/*#define ninstr 13
-unsigned int ldness[ninstr]  = {    64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64}; // loudness   
-unsigned int pitch0[ninstr]  = {    12,   12,   12,   12,   12,   24,   24,    0,   12,   24,   12,   12,   24}; // pitch of key0         
-unsigned int ADSR_a[ninstr]  = {  4096, 4096, 8192, 8192, 8192, 4096,  512,  512, 8192,  128,  128,  256,  256}; // attack parameter  
-unsigned int ADSR_d[ninstr]  = {   512,  256,  512,   16,   16,    8,   16,   16,    8,   512,   16,   64,   32}; // decay parameter   
-unsigned int ADSR_s[ninstr]  = {     0,    0,    0,    0,    0,    0,    0,    0,    0,  240,  240,  192,  192}; // sustain parameter 
-unsigned int ADSR_r[ninstr]  = {   32,   64,  128,   32,   32,   16,   32,   32,   32,   32,   32,   64,   64}; // release parameter 
-unsigned int FM_inc[ninstr]  = {   96,  256,  512,  768,  400,  200,   96,  528,  244,  256,  128,   64,  160}; // FM frequency wrt pitch
-unsigned int FM_a1[ninstr]  =  {   0 ,  128,  512,  512, 1024,  512,    0, 1024, 2048,  256,  256,  384,  256}; // FM amplitude start
-unsigned int FM_a2[ninstr]  =  {   64,   64,    0,  128,  128,  128,  512,  768,  512,  128,  128,  256,  128}; // FM amplitude end
-unsigned int FM_dec[ninstr]  = {   64,   64,  128,  128,  128,   32,  128,  128,  128,  128,  128,   64,   64}; // FM decay*/
+/*shorter attack*/
+/*
+ #define ninstr 12           //   piano xlphn guitar cmbll bell funky vibr metal violin bass trumpt harm
+unsigned int ldness[ninstr]  = {   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,   64}; // loudness   
+unsigned int pitch0[ninstr]  = {   12,   12,    0,   12,   24,   24,    0,   12,   24,   12,   12,   24}; // pitch of key0         
+unsigned int ADSR_a[ninstr]  = { 4096, 8192, 8192, 8192, 4096,  512,  512, 8192,  4096,  8192,  4096,  8192}; // attack parameter  
+unsigned int ADSR_d[ninstr]  = {    8,   32,   16,   16,    8,   16,   16,    8,   16,   16,   64,   32}; // decay parameter   
+unsigned int ADSR_s[ninstr]  = {    0,    0,    0,    0,    0,    0,    0,    0,  240,  240,  192,  192}; // sustain parameter 
+unsigned int ADSR_r[ninstr]  = {   128,  128,   128,   128,   256,   256,   128,   128,   64,   256,   64,   256}; // release parameter 
+unsigned int FM_inc[ninstr]  = {  256,  512,  768,  400,  200,   96,  528,  244,  256,  128,   64,  160}; // FM frequency wrt pitch
+unsigned int FM_a1[ninstr]  =  {  128,  512,  512, 1024,  512,    0, 1024, 2048,  256,  256,  384,  256}; // FM amplitude start
+unsigned int FM_a2[ninstr]  =  {   64,    0,  128,  128,  128,  512,  768,  512,  128,  128,  256,  128}; // FM amplitude end
+unsigned int FM_dec[ninstr]  = {   64,  128,  128,  128,   32,  128,  128,  128,  128,  128,   64,   64}; // FM decay
+*/
+/*weirder sound my favorite*/
+#define ninstr 12           //   kora harm funky xlphn cmbll  bell vibr  metal guitar violin bass trumpt 
+unsigned int ldness[ninstr]  = {   64,   64,   64,   64,   64,   64,   64,   64,   64,   64,    64,   64}; // loudness   
+unsigned int pitch0[ninstr]  = {   24,   24,   12,   12,   12,   24,   12,   12,    0,   24,     0,   24}; // pitch of key0         
+unsigned int ADSR_a[ninstr]  = { 8192, 8192, 1024, 8192, 8192, 4096, 4096, 8192, 8192, 4096,  8192, 4096}; // attack parameter  
+unsigned int ADSR_d[ninstr]  = {   32,   32,   16,   32,   16,    8,   16,    8,   16,   16,    16,   64}; // decay parameter   
+unsigned int ADSR_s[ninstr]  = {    0,  192,    0,    0,    0,    0,    0,    0,    0,  240,   240,  64}; // sustain parameter 
+unsigned int ADSR_r[ninstr]  = {  128,  256,  128,  128,  128,   96,   96,  128,   96,   64,   256,  128}; // release parameter 
+unsigned int FM_inc[ninstr]  = {   32,  160,  800,  256,  400,  200,  128,  128,  256,  256,   128,   16}; // FM frequency wrt pitch
+unsigned int FM_a1[ninstr]  =  {  512,  256,   64,  512,  512,  512, 1024, 2048,  512,  256,   256,  384}; // FM amplitude start
+unsigned int FM_a2[ninstr]  =  {    0,  128,  512,    0,  128,  128,  768,  512,  128,  128,   128,  128}; // FM amplitude end
+unsigned int FM_dec[ninstr]  = {  128,   64,    8,  128,  128,   32,  128,   32,  128,  128,   128,   32}; // FM decay
 
 //define the pitch2key mapping
 #define keyC4   0
@@ -74,6 +91,8 @@ unsigned int FM_dec[ninstr]  = {   64,   64,  128,  128,  128,   32,  128,  128,
 #define instrkey 254
 
 //define the pin to key mapping for 18-key keyboard 
+/* si major*/
+/*
 #define pinD2 keyB5    //Arduino pin D2
 #define pinD3 keyF5s    //Arduino pin D3
 #define pinD4 keyC5s   //Arduino pin D4
@@ -85,8 +104,20 @@ unsigned int FM_dec[ninstr]  = {   64,   64,  128,  128,  128,   32,  128,  128,
 #define pinB2 keyE5   //Arduino pin D10
 #define pinB3 keyG5s    //Arduino pin D11 
 #define pinB4 instrkey //Arduino pin D12
+*/
 
-
+/* mi  majeur*/
+#define pinD2 keyG5s    //Arduino pin D2
+#define pinD3 keyE5    //Arduino pin D3
+#define pinD4 keyB4   //Arduino pin D4
+#define pinD5 keyF4s    //Arduino pin D5
+#define pinD6 keyE4    //Arduino pin D6
+#define pinD7 keyG4s    //Arduino pin D7
+#define pinB0 keyC5s    //Arduino pin D8
+#define pinB1 nokey    //Arduino pin D9  used for audio out
+#define pinB2 keyF5s   //Arduino pin D10
+#define pinB3 keyB5    //Arduino pin D11 
+#define pinB4 instrkey //Arduino pin D12
 
 //set up array with sine values in signed 8-bit numbers 
 const float pi = 3.14159265;
@@ -259,9 +290,9 @@ void loop() {
   if ( keypressed==instrkey) {
     instr++;
     if (instr>=ninstr) instr=0;
-    keypressed=keyA4;
+    keypressed=keyE4;
   }
-  if (keyreleased==instrkey) keyreleased=keyA4;
+  if (keyreleased==instrkey) keyreleased=keyE4;
   
   setPWM(); //#2
 
